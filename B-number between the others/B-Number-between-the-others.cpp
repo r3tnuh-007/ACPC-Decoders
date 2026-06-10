@@ -2,14 +2,24 @@
 
 using namespace std;
 
+void check_z(long long x, long long y)
+{
+	long long z = 2 * x;
+	if (y > z)
+		cout << "YES\n";
+	else
+		cout << "NO\n";
+}
+
 int main() {
-    int a, b, c;
-    cin >> a >> b >> c;
+	long long t;
 
-    if ((a < b && b < c) || (c < b && b < a))
-        cout << "YES\n";
-    else
-        cout << "NO\n";
-
-    return 0;
+	cin >> t;
+	while (t --)
+	{
+		long long x, y;
+		cin >> x >> y;
+		check_z(x, y);
+	}
+	return 0;
 }
